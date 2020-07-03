@@ -18,3 +18,7 @@ var titleToNumber = function (s) {
     return n;
 };
 // @lc code=end
+console.log(titleToNumber('ZZZZZ'));
+let a = 26, b = 2, c = 3, d = 1;
+let result = 26**3*a //+ 26**2*b //+ 26**1*c //+ 26**0*d;
+
