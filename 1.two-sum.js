@@ -11,14 +11,15 @@
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-  let map = {};
-  let complement;
+  const map = {}
+  let complement
   for (let i = 0; i < nums.length; i++) {
-    complement = target - nums[i];
+    complement = target - nums[i]
     if (map[complement] !== undefined) {
-      return [map[complement], i];
+      return [map[complement], i]
     }
-    map[nums[i]] = i;
+    map[nums[i]] = i
   }
-};
+}
 // @lc code=end
+module.exports = twoSum

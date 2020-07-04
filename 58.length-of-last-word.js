@@ -10,8 +10,9 @@
  * @return {number}
  */
 var lengthOfLastWord = function (s) {
-  if (!s) return 0;
-  s = s.trim();
-  return s.length - s.lastIndexOf(' ') - 1;
-};
+  if (!s) return 0
+  s = s.trim()
+  return s.length - s.lastIndexOf(' ') - 1
+}
 // @lc code=end
+module.exports = lengthOfLastWord

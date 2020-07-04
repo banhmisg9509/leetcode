@@ -10,18 +10,19 @@
  * @return {number[]}
  */
 var getRow = function (rowIndex) {
-  return Array(rowIndex + 1).fill(0).map((_, i) => comb(rowIndex, i));
-};
+  return Array(rowIndex + 1).fill(0).map((_, i) => comb(rowIndex, i))
+}
 
-function comb(n, r) {
-  r = Math.min(r, n - r);
-  let numer = 1, denom = 1;
+function comb (n, r) {
+  r = Math.min(r, n - r)
+  let numer = 1; let denom = 1
   for (let i = n; i > n - r; i--) {
-    numer *= i;
+    numer *= i
   }
   for (let i = r; i > 0; i--) {
-    denom *= i;
+    denom *= i
   }
-  return Math.round(numer / denom);
+  return Math.round(numer / denom)
 }
 // @lc code=end
+module.exports = getRow

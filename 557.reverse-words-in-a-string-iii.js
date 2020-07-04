@@ -9,8 +9,9 @@
  * @param {string} s
  * @return {string}
  */
-var reverseWords = function(s) {
-  const reverse = str => str.split('').reverse().join('');  
-  return s.split(' ').map(reverse).join(' ');
-};
+var reverseWords = function (s) {
+  const reverse = str => str.split('').reverse().join('')
+  return s.split(' ').map(reverse).join(' ')
+}
 // @lc code=end
+module.exports = reverseWords

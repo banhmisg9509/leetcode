@@ -10,12 +10,15 @@
  * @return {void} Do not return anything, modify s in-place instead.
  */
 var reverseString = function (s) {
-  let len = s.length, mid = len / 2 >> 0, temp;
+  const len = s.length
+  const mid = len >> 1
+  let temp
   for (let i = 0; i < mid; i++) {
-    temp = s[i];
-    s[i] = s[len - i - 1];
-    s[len - i - 1] = temp;
+    temp = s[i]
+    s[i] = s[len - i - 1]
+    s[len - i - 1] = temp
   }
-  return s; 
-};
+  return s
+}
 // @lc code=end
+module.exports = reverseString

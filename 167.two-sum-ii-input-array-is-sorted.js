@@ -11,19 +11,18 @@
  * @return {number[]}
  */
 var twoSum = function (numbers, target) {
-    let low = 0, high = numbers.length - 1, sum;
-    while (true) {
-        sum = numbers[low] + numbers[high];
-        if (sum === target) {
-            return [low + 1, high + 1];
-        }
-        if (sum < target) {
-            low++;
-        } else {
-            high--;
-        }
+  let low = 0; let high = numbers.length - 1; let sum
+  while (true) {
+    sum = numbers[low] + numbers[high]
+    if (sum === target) {
+      return [low + 1, high + 1]
     }
-};
+    if (sum < target) {
+      low++
+    } else {
+      high--
+    }
+  }
+}
 // @lc code=end
-
-
+module.exports = twoSum

@@ -11,20 +11,21 @@
  * @return {number}
  */
 var removeElement = function (nums, val) {
-  let i = 0;
+  let i = 0
   for (let j = 0; j < nums.length; j++) {
     if (nums[j] === val) {
-      let t = j;
+      let t = j
       while (t < nums.length) {
-        nums[t] = nums[t + 1];
-        t++;
+        nums[t] = nums[t + 1]
+        t++
       }
-      j--;
-      i--;
+      j--
+      i--
     } else {
-      i++;
+      i++
     }
   }
-  return i;
-};
+  return i
+}
 // @lc code=end
+module.exports = removeElement

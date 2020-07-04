@@ -17,15 +17,15 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isSymmetric = function(root) {
-  if(!root) return true;
-  return isMirror(root.left, root.right);
-};
+var isSymmetric = function (root) {
+  if (!root) return true
+  return isMirror(root.left, root.right)
+}
 
-function isMirror(l, r) {
-  if(!l && !r) return true;
-  if(!l || !r) return false;
-  return (l.val === r.val && isMirror(l.left, r.right) && isMirror(l.right, r.left));
+function isMirror (l, r) {
+  if (!l && !r) return true
+  if (!l || !r) return false
+  return (l.val === r.val && isMirror(l.left, r.right) && isMirror(l.right, r.left))
 }
 // @lc code=end
-
+module.exports = isSymmetric

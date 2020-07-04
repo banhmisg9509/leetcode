@@ -9,14 +9,14 @@
  * @param {number} n
  * @return {string}
  */
-let s = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const s = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 var convertToTitle = function (n) {
-    if (n >= 1 && n <= 26) {
-        return s[n];
-    }
-    return convertToTitle((n - n % 26) / 26) + s[n > 26 ? n % 26 : n];
-};
+  if (n >= 1 && n <= 26) {
+    return s[n]
+  }
+  return convertToTitle((n - ((n % 26) || 26)) / 26) + s[n > 26 ? (n % 26) || 26 : n]
+}
 // @lc code=end
-console.log(convertToTitle(701));
+module.exports = convertToTitle
 
 // sum += Math.pow(26, s.length - i - 1) * (c.charCodeAt(0) - 64)

@@ -17,12 +17,12 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var minDepth = function(root) {
-    if(!root) return 0;
-    if(!root.left && !root.right) return 1;
-    let left = minDepth(root.left);
-    let right = minDepth(root.right);
-    return Math.min(left ? left : right, right ? right : left) + 1;
-};
+var minDepth = function (root) {
+  if (!root) return 0
+  if (!root.left && !root.right) return 1
+  const left = minDepth(root.left)
+  const right = minDepth(root.right)
+  return Math.min(left || right, right || left) + 1
+}
 // @lc code=end
-
+module.exports = minDepth

@@ -9,8 +9,9 @@
  * @param {string} s
  * @return {boolean}
  */
-var isPalindrome = function(s) {
-    s = s.replace(/[^a-zA-Z0-9]/g, '').toLocaleLowerCase().split('');
-    return s.join('') === s.reverse().join('');
-};
+var isPalindrome = function (s) {
+  s = s.replace(/[^a-zA-Z0-9]/g, '').toLocaleLowerCase().split('')
+  return s.join('') === s.reverse().join('')
+}
 // @lc code=end
+module.exports = isPalindrome

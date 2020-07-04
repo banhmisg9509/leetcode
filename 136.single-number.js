@@ -9,8 +9,8 @@
  * @param {number[]} nums
  * @return {number}
  */
-var singleNumber = function(nums) {
-    return nums.reduce((a, b) => a^b);
-};
+var singleNumber = function (nums) {
+  return nums.reduce((a, b) => a ^ b)
+}
 // @lc code=end
-
+module.exports = singleNumber

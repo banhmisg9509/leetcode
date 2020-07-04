@@ -5,8 +5,15 @@
 --
 -- @lc code=start
 # Write your MySQL query statement below
-SELECT Salary as SecondHighestSalary
-FROM Employee
-ORDER BY Salary DESC
-LIMIT 2 OFFSET 1;
+select
+  max(Salary) as SecondHighestSalary
+from
+  Employee
+where
+  Salary < (
+    select
+      max(Salary)
+    from
+      Employee
+  ) 
 -- @lc code=end

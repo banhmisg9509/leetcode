@@ -18,7 +18,7 @@
  * @param {number} sum
  * @return {boolean}
  */
-var hasPathSum = function(root, sum) {
-};
+var hasPathSum = function (root, sum) {
+}
 // @lc code=end
-
+module.exports = hasPathSum

@@ -11,13 +11,14 @@
  */
 var isPalindrome = function (x) {
   if (x < 0 || (x % 10 === 0 && x !== 0)) {
-    return false;
+    return false
   }
-  let result = 0;
+  let result = 0
   while (x > result) {
-    result = result * 10 + x % 10;
-    x = x / 10 >> 0;
+    result = result * 10 + x % 10
+    x = x / 10 >> 0
   }
-  return x === result || x === Math.floor(result / 10);
-};
+  return x === result || x === Math.floor(result / 10)
+}
 // @lc code=end
+module.exports = isPalindrome

@@ -16,21 +16,21 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var deleteDuplicates = function(head) {
-    let current, prev;
-    current = head;
-    prev = head;
-    if(!head) return head;
-    while(current.next !== null) {
-      if(current.val !== current.next.val) {
-        prev.next = current.next;
-        prev = current.next;
-      }
-      current = current.next;
+var deleteDuplicates = function (head) {
+  let current, prev
+  current = head
+  prev = head
+  if (!head) return head
+  while (current.next !== null) {
+    if (current.val !== current.next.val) {
+      prev.next = current.next
+      prev = current.next
     }
-    prev.next = current.next;
-    prev = current;
-    return head;
-};
+    current = current.next
+  }
+  prev.next = current.next
+  prev = current
+  return head
+}
 // @lc code=end
-
+module.exports = deleteDuplicates

@@ -9,8 +9,9 @@
  * @param {number[]} nums
  * @return {number}
  */
-var missingNumber = function(nums) {
-    let sum = nums.length * (nums.length + 1) >> 1;
-    return sum - nums.reduce((a, b) => a + b);
-};
+var missingNumber = function (nums) {
+  const sum = nums.length * (nums.length + 1) >> 1
+  return sum - nums.reduce((a, b) => a + b)
+}
 // @lc code=end
+module.exports = missingNumber

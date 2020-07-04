@@ -10,12 +10,13 @@
  * @return {number}
  */
 var climbStairs = function (n) {
-  let dp = [1, 1], temp;
+  const dp = [1, 1]; let temp
   while (n-- > 1) {
-    temp = dp[1];
-    dp[1] = dp[0] + dp[1];
-    dp[0] = temp;
+    temp = dp[1]
+    dp[1] = dp[0] + dp[1]
+    dp[0] = temp
   }
-  return dp[1];
-};
+  return dp[1]
+}
 // @lc code=end
+module.exports = climbStairs

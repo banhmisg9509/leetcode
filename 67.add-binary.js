@@ -12,18 +12,18 @@
  */
 var addBinary = function (a, b) {
   if (a.length >= b.length) {
-    b = '0'.repeat(a.length - b.length) + b;
+    b = '0'.repeat(a.length - b.length) + b
   } else {
-    a = '0'.repeat(b.length - a.length) + a;
+    a = '0'.repeat(b.length - a.length) + a
   }
-  let sum = 0, carry = 0, result = '';
+  let sum = 0; let carry = 0; let result = ''
   for (let i = a.length - 1; i >= 0; i--) {
-    sum = +a[i] + +b[i] + carry;
-    carry = sum / 2 >> 0;
-    result = (sum % 2) + result;
+    sum = +a[i] + +b[i] + carry
+    carry = sum / 2 >> 0
+    result = (sum % 2) + result
   }
 
-  return carry ? '1' + result : result;
-};
+  return carry ? '1' + result : result
+}
 // @lc code=end
-
+module.exports = addBinary

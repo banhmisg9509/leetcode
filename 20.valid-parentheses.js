@@ -10,19 +10,20 @@
  * @return {boolean}
  */
 var isValid = function (s) {
-  let valid = /\(\)|\[\]|\{\}/;
-  let bucket = [];
-  for (let p of s) {
+  const valid = /\(\)|\[\]|\{\}/
+  const bucket = []
+  for (const p of s) {
     if (p === '(' || p === '[' || p === '{') {
-      bucket.push(p);
-      continue;
+      bucket.push(p)
+      continue
     }
     if (valid.test(bucket[bucket.length - 1] + p)) {
-      bucket.pop();
-      continue;
+      bucket.pop()
+      continue
     }
-    return false;
+    return false
   }
-  return bucket.length === 0;
-};
+  return bucket.length === 0
+}
 // @lc code=end
+module.exports = isValid

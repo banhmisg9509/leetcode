@@ -11,21 +11,19 @@
  * @return {number}
  */
 var searchInsert = function (nums, target) {
-  let begin = 0, end = nums.length - 1;
-  let mid;
+  let begin = 0; let end = nums.length - 1
+  let mid
   while (begin < end) {
-    mid = (begin + end) >> 1;
+    mid = (begin + end) >> 1
     if (nums[mid] < target) {
-      begin = mid + 1;
+      begin = mid + 1
     } else if (nums[mid] > target) {
-      end = mid - 1;
+      end = mid - 1
     } else {
-      return mid;
+      return mid
     }
   }
-  return nums[begin] < target ? begin + 1 : begin;
-};
+  return nums[begin] < target ? begin + 1 : begin
+}
 // @lc code=end
-
-
-
+module.exports = searchInsert

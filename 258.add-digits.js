@@ -10,16 +10,16 @@
  * @return {number}
  */
 var addDigits = function (num) {
-  let sum = 0;
+  let sum = 0
   while (num >= 10) {
-    while(num > 0) {
-      sum += num % 10;
-      num = num / 10 >> 0;
+    while (num > 0) {
+      sum += num % 10
+      num = num / 10 >> 0
     }
-    num = sum;
-    sum = 0;
+    num = sum
+    sum = 0
   }
-  return num;
-};
+  return num
+}
 // @lc code=end
-
+module.exports = addDigits
